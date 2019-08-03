@@ -1,6 +1,5 @@
 import requests
 import json
-import call_me
 import alerted
 import os
 
