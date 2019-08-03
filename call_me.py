@@ -24,5 +24,5 @@ def call_someone(num):
 
 def call_people_to_alert():
     call_someone(kiraa)
-    #call_someone(mlpard)
+    call_someone(mlpard)
 

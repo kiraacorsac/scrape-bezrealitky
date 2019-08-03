@@ -31,7 +31,7 @@ def request():
 
     c = json.loads(result.content)
     new_homes = []
-    homes = c['data']['watchdogList']['list'][1]['adverts']['list']
+    homes = c['data']['watchdogList']['list'][0]['adverts']['list']
     for home in homes:
         if str(home['id']) + "\n" not in alerted.get_called_list():
             new_homes.append({
