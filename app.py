@@ -15,7 +15,7 @@ def hello():
     if len(homes) > 0:
         call_me.call_people_to_alert()
         return json.dumps(homes)
-    return  "Autozápis proveden" in molbio.content + "<br>" + "nothing new" + "<br>" + ("-"*50) + "<br>" + json.dumps(alerted.get_called_list())
+    return  "Autozápis proveden" in str(molbio.content) + "<br>" + "nothing new" + "<br>" + ("-"*50) + "<br>" + json.dumps(alerted.get_called_list())
 
 if __name__ == "__main__":
     app.run(port=80)
