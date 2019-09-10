@@ -1,12 +1,16 @@
 from flask import Flask
 import scrape_bezrealitky
+import spam_attempt
 import call_me
 import alerted
 import json
 app = Flask(__name__)
 
+
 @app.route("/")
 def hello():
+    
+    spam_attempt.request()
     homes = scrape_bezrealitky.request()[0]
     if len(homes) > 0:
         call_me.call_people_to_alert()
